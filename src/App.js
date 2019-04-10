@@ -40,6 +40,10 @@ class App extends Component {
       this.loadCategorias()
     })
   }
+
+  createProduto = (produto) => {
+    return this.props.api.createProduto(produto)
+  }
   
   render() {
     return (
@@ -71,6 +75,8 @@ class App extends Component {
                 removeCategoria={this.removeCategoria}
                 createCategoria={this.createCategoria}
                 editCategoria={this.editCategoria}
+
+                createProduto={this.createProduto}
                 /> 
               )}} />
           </div>

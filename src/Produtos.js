@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {Route, Link } from 'react-router-dom'
 
 import ProdutosHome from './ProdutosHome'
+import ProdutosNovo from './ProdutosNovo'
 import Categoria from './Categoria'
 
 class Produtos extends Component {
@@ -84,7 +85,7 @@ class Produtos extends Component {
     }
 
     render(){
-        const { match, categorias } = this.props;
+        const { match, categorias, createProduto } = this.props;
         
         return (
             <div className='row'>
@@ -102,11 +103,18 @@ class Produtos extends Component {
                             placeholder="Nova Categoria" 
                         />
                     </div>
+                    <Link to='/produtos/novo'>Novo Produto</Link>
                 </div>
                 <div className='col-md-10'>
                     <h1>Produtos</h1>
                     <Route exact path={match.url} component={ProdutosHome} />
-                    <Route exact path={match.url+'/categoria/:catId'} component={Categoria} />
+                    <Route exact path={match.url+'/novo'} render={(props) => {
+                        return <ProdutosNovo {...props} 
+                            categorias={categorias}
+                            createProduto={createProduto}    
+                        />} 
+                    }/>
+                    <Route path={match.url+'/categoria/:catId'} component={Categoria} />
                 </div>
             </div>
 

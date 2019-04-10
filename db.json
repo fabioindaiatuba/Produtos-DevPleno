@@ -14,6 +14,26 @@
       "id": 3,
       "produto": "Bolacha",
       "categoria": 2
+    },
+    {
+      "produto": "Comida Teste",
+      "categoria": "2",
+      "id": 4
+    },
+    {
+      "produto": "Novo Alimentos",
+      "categoria": "2",
+      "id": 5
+    },
+    {
+      "produto": "Produto de Limpeza",
+      "categoria": "1",
+      "id": 6
+    },
+    {
+      "produto": "Computador",
+      "categoria": "3",
+      "id": 7
     }
   ],
   "categorias": [
@@ -23,7 +43,7 @@
     },
     {
       "id": 1,
-      "categoria": "Casa"
+      "categoria": "Limpeza"
     },
     {
       "id": 2,
