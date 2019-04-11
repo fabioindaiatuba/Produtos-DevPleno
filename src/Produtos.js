@@ -85,7 +85,7 @@ class Produtos extends Component {
     }
 
     render(){
-        const { match, categorias, createProduto } = this.props;
+        const { match, categorias, produtos, loadCategoria, categoria, createProduto, removeProduto, loadProdutos } = this.props;
         
         return (
             <div className='row'>
@@ -114,7 +114,16 @@ class Produtos extends Component {
                             createProduto={createProduto}    
                         />} 
                     }/>
-                    <Route path={match.url+'/categoria/:catId'} component={Categoria} />
+                    <Route path={match.url+'/categoria/:catId'} 
+                        render={(props) => (
+                            <Categoria {...props} 
+                                loadCategoria={loadCategoria}
+                                categoria={categoria}
+                                loadProdutos={loadProdutos} 
+                                produtos={produtos}
+                                removeProduto={removeProduto}
+                            />
+                        )} />
                 </div>
             </div>
 

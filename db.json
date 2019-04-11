@@ -1,11 +1,6 @@
 {
   "produtos": [
     {
-      "id": 1,
-      "produto": "Sabão Liquido",
-      "categoria": 1
-    },
-    {
       "id": 2,
       "produto": "Sabão em Pó",
       "categoria": 1
@@ -16,24 +11,14 @@
       "categoria": 2
     },
     {
-      "produto": "Comida Teste",
-      "categoria": "2",
+      "produto": "Computador",
+      "categoria": "3",
       "id": 4
     },
     {
-      "produto": "Novo Alimentos",
-      "categoria": "2",
-      "id": 5
-    },
-    {
-      "produto": "Produto de Limpeza",
-      "categoria": "1",
-      "id": 6
-    },
-    {
-      "produto": "Computador",
+      "produto": "Mouse",
       "categoria": "3",
-      "id": 7
+      "id": 5
     }
   ],
   "categorias": [
