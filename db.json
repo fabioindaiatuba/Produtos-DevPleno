@@ -7,7 +7,7 @@
     },
     {
       "id": 3,
-      "produto": "Bolacha",
+      "produto": "Bolacha Salgada",
       "categoria": "2"
     },
     {
@@ -21,9 +21,9 @@
       "id": 5
     },
     {
-      "produto": "Arroz",
-      "categoria": "2",
-      "id": 7
+      "id": 7,
+      "produto": "Arroz e feijão",
+      "categoria": "2"
     }
   ],
   "categorias": [

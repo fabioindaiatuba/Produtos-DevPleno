@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom'
 
 class Categoria extends Component {
     constructor(props) {
@@ -39,6 +40,9 @@ class Categoria extends Component {
                     >
                         <i className="fas fa-minus-circle"></i>
                     </button>
+                    <Link className="btn btn-outline-info btn-sm" to={`/produtos/editar/${produto.id}`}>
+                        <i className="fas fa-pencil-alt"></i>
+                    </Link>
                 </div>
             </div>
         )

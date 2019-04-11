@@ -66,7 +66,15 @@ class App extends Component {
       })
     })
   }
+
+  readProduto = (id) => {
+    return this.props.api.readProduto(id)
+  }
   
+  editProduto = (produto) => {
+    return this.props.api.editProduto(produto)
+  }
+
   render() {
     return (
       <Router>
@@ -101,9 +109,11 @@ class App extends Component {
                 loadCategoria={this.loadCategoria}
                 categoria={this.state.categoria}
                 
+                readProduto={this.readProduto}
                 loadProdutos={this.loadProdutos}
                 createProduto={this.createProduto}
                 removeProduto={this.removeProduto}
+                editProduto={this.editProduto}
                 produtos={this.state.produtos}
                 /> 
               )}} />

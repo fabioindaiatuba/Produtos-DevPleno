@@ -8,3 +8,4 @@
 * Layout com bootstrap.
 * Api axios conectando em bd em JSON Server
 * Passagem de state e props para componentes filhos (Sem Redux)
+* Sem estrutura de pasta do projeto, somente pasta src

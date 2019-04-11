@@ -1,17 +1,27 @@
 import React, { Component } from 'react'
+
 import { Redirect } from 'react-router-dom'
 
-class ProdutosNovo extends Component {
+class ProdutosEditar extends Component {
     state = {
+        produto: {},
         redirect: false
     }
 
-    handleNovoProduto = () => {
+    componentDidMount(){
+       this.props.readProduto(this.props.match.params.id).then((res) => {
+            this.refs.produto.value = res.data.produto
+            this.refs.categoria.value = res.data.categoria
+        })
+    }
+
+    handleEditProduto = () => {
         const produto = {
+            id: this.props.match.params.id,
             produto: this.refs.produto.value,
             categoria: this.refs.categoria.value
         }
-        this.props.createProduto(produto).then(
+        this.props.editProduto(produto).then(
             (res) => this.setState({ redirect: '/produtos/categoria/'+produto.categoria})
         );
     }
@@ -23,7 +33,7 @@ class ProdutosNovo extends Component {
         }
         return (
             <div>
-                <h2>Novo Produto</h2>
+                <h2>Editar Produto</h2>
                 <select ref="categoria">
                     {categorias.map((c) => <option key={c.id} value={c.id}>{c.categoria}</option>)}
                 </select>
@@ -32,10 +42,10 @@ class ProdutosNovo extends Component {
                     placeholder='Nome do produto'
                     ref='produto' 
                 />
-                <button onClick={this.handleNovoProduto}>Salvar</button>
+                <button onClick={this.handleEditProduto}>Salvar</button>
             </div>
         )
     }
 }
 
-export default ProdutosNovo;
+export default ProdutosEditar
