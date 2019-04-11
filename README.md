@@ -1,6 +1,6 @@
 # CRUD de Produtos em ReactJS - Curso ReactJS - DevPleno
 
-![imagem com a tela do sistema](https://github.com/fabioindaiatuba/Calculadora-DevPleno/raw/master/snapshots/tela1.png)
+![imagem com a tela do sistema](https://github.com/fabioindaiatuba/Produtos-DevPleno/raw/master/snapshots/tela1.png)
 
 ## Funções
 
