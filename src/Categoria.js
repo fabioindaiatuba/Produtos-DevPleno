@@ -34,8 +34,8 @@ class Categoria extends Component {
                         {produto.produto}
                     </p>
                     <button className="btn btn-outline-danger btn-sm" 
-                        onClick={() => this.props.removeProduto(produto).then(res=> this.loadData(this.props.match.params.catId))}
-                    
+                        onClick={() => this.props.removeProduto(produto)
+                            .then(res=> this.loadData(this.props.match.params.catId))}
                     >
                         <i className="fas fa-minus-circle"></i>
                     </button>
